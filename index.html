@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sadam Qureshi | Full Stack Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #60a5fa;
+            --secondary: #a855f7;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #030303;
+            color: #e2e8f0;
+            scroll-behavior: smooth;
+        }
+
+        .glass-card {
+            background: var(--glass);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.2, 1, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            border-color: rgba(96, 165, 250, 0.4);
+            background: rgba(255, 255, 255, 0.06);
+            transform: translateY(-8px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .filter-btn.active {
+            background: white;
+            color: black;
+        }
+
+        .project-card.hidden {
+            display: none;
+        }
+
+        .social-btn {
+            width: 45px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+
+        .social-btn:hover {
+            background: var(--primary);
+            color: black;
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Nav -->
+    <nav class="fixed w-full z-50 px-6 py-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center glass-card py-4 px-10 shadow-2xl">
+            <div class="text-xl font-extrabold tracking-tighter uppercase">S.Qureshi<span class="text-blue-500">.</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-widest opacity-40">
+                <a href="#hero" class="hover:text-white transition">Home</a>
+                <a href="#projects" class="hover:text-white transition">Portfolio</a>
+                <a href="#experience" class="hover:text-white transition">Experience</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
+            <a href="https://wa.me/yournumber"
+                class="bg-blue-600 px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-blue-500 transition">Let's
+                Talk</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-screen flex items-center px-6 pt-20">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-8 space-y-6">
+                <h1 class="text-6xl md:text-8xl font-extrabold leading-[0.9] tracking-tighter">
+                    Full Stack <span class="text-gradient">Engineer</span><br>& UI Specialist
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 max-w-2xl font-light">
+                    Building <span id="typewriter" class="text-white font-bold border-r-2 border-blue-500"></span> for
+                    high-density enterprise environments.
+                </p>
+                <div class="flex flex-wrap gap-6 pt-6">
+                    <a href="#projects"
+                        class="bg-white text-black px-10 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-blue-500 hover:text-white transition-all">My
+                        Work</a>
+                    <div class="flex space-x-3">
+                        <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section (RESTORED) -->
+    <section id="projects" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+                <h2 class="text-4xl font-extrabold uppercase tracking-tighter italic">Featured <span
+                        class="text-gradient">Projects</span></h2>
+                <div class="flex p-1 glass-card rounded-xl border-white/5">
+                    <button
+                        class="filter-btn active px-6 py-2 rounded-lg text-[10px] font-black tracking-widest transition"
+                        onclick="filterProjects('all', this)">ALL</button>
+                    <button class="filter-btn px-6 py-2 rounded-lg text-[10px] font-black tracking-widest transition"
+                        onclick="filterProjects('laravel', this)">LARAVEL</button>
+                    <button class="filter-btn px-6 py-2 rounded-lg text-[10px] font-black tracking-widest transition"
+                        onclick="filterProjects('flutter', this)">FLUTTER</button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="project-card glass-card overflow-hidden group" data-category="laravel">
+                    <div class="h-56 bg-[#0a0a0a] flex items-center justify-center border-b border-white/5">
+                        <i
+                            class="fas fa-hospital text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">Hospital ERP System</h3>
+                        <p class="text-gray-400 text-sm mb-6">Centralized patient records and billing for Hashim Medical
+                            City.</p>
+                        <span class="text-[10px] font-black text-blue-400 uppercase tracking-widest">Laravel /
+                            MySQL</span>
+                    </div>
+                </div>
+                <div class="project-card glass-card overflow-hidden group" data-category="flutter">
+                    <div class="h-56 bg-[#0a0a0a] flex items-center justify-center border-b border-white/5">
+                        <i
+                            class="fas fa-mobile-screen text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">MediTrack App</h3>
+                        <p class="text-gray-400 text-sm mb-6">Real-time health monitoring and medication alert system.
+                        </p>
+                        <span class="text-[10px] font-black text-purple-400 uppercase tracking-widest">Flutter /
+                            Firebase</span>
+                    </div>
+                </div>
+                <div class="project-card glass-card overflow-hidden group" data-category="laravel">
+                    <div class="h-56 bg-[#0a0a0a] flex items-center justify-center border-b border-white/5">
+                        <i
+                            class="fas fa-chart-line text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">Admin Dashboard</h3>
+                        <p class="text-gray-400 text-sm mb-6">High-density data management with custom DataTables.</p>
+                        <span class="text-[10px] font-black text-emerald-400 uppercase tracking-widest">Laravel /
+                            PHP</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (RESTORED) -->
+    <section id="experience" class="py-24 px-6 bg-[#050505]">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl font-extrabold uppercase mb-10 italic">Work <span
+                        class="text-gradient">History</span></h2>
+                <div class="space-y-8 mb-4">
+                    <div class="glass-card p-8 border-white/5">
+                        <p class="text-blue-500 font-black text-xs mb-2 uppercase tracking-widest">2025 - 2026</p>
+                        <h4 class="text-xl font-bold mb-2">Laravel Developer</h4>
+                        <p class="text-gray-500 text-sm mb-4">ITcians</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Developing mission-critical web applications and API's using Laravel framework.</p>
+                    </div>
+                </div>
+                <div class="space-y-8 mb-4">
+                    <div class="glass-card p-8 border-white/5">
+                        <p class="text-blue-500 font-black text-xs mb-2 uppercase tracking-widest">2026 - Present</p>
+                        <h4 class="text-xl font-bold mb-2">Full Stack Developer</h4>
+                        <p class="text-gray-500 text-sm mb-4">Hashim Medical City Hospital</p>
+                        <p class="text-gray-400 text-sm leading-relaxed">Developing and maintaining web applications using modern technologies like ASP.Net MVC.</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h2 class="text-4xl font-extrabold uppercase mb-10 italic">Core <span
+                        class="text-gradient">Skills</span></h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass-card p-6 text-center border-white/5">
+                        <i class="fab fa-laravel text-3xl text-red-500 mb-4"></i>
+                        <p class="text-[10px] font-black uppercase tracking-widest">Laravel</p>
+                    </div>
+                    <div class="glass-card p-6 text-center border-white/5">
+                        <i class="fab fa-dot-net text-3xl text-blue-500 mb-4"></i>
+                        <p class="text-[10px] font-black uppercase tracking-widest">ASP.Net MVC</p>
+                    </div>
+                    <div class="glass-card p-6 text-center border-white/5">
+                        <i class="fab fa-flutter text-3xl text-blue-400 mb-4"></i>
+                        <p class="text-[10px] font-black uppercase tracking-widest">Flutter</p>
+                    </div>
+                    <div class="glass-card p-6 text-center border-white/5">
+                        <i class="fas fa-database text-3xl text-emerald-500 mb-4"></i>
+                        <p class="text-[10px] font-black uppercase tracking-widest">SQL</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6">
+        <div class="max-w-7xl mx-auto glass-card p-12 md:p-20 border-white/5">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div class="space-y-8">
+                    <h2 class="text-6xl font-extrabold tracking-tighter uppercase italic">Let's <span
+                            class="text-gradient">Connect</span></h2>
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-envelope text-blue-500"></i>
+                            <span class="font-bold">pirsadam05@gmail.com</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fab fa-whatsapp text-green-500"></i>
+                            <span class="font-bold">+92 303 5609341</span>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <i class="fas fa-location-dot text-purple-500"></i>
+                            <span class="font-bold">Hyderabad, Pakistan</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <form class="space-y-4">
+                    <div class="grid grid-cols-2 gap-4">
+                        <input type="text" placeholder="NAME"
+                            class="w-full bg-white/5 p-5 rounded-xl border border-white/10 outline-none focus:border-blue-500 transition font-bold text-[10px]">
+                        <input type="email" placeholder="EMAIL"
+                            class="w-full bg-white/5 p-5 rounded-xl border border-white/10 outline-none focus:border-blue-500 transition font-bold text-[10px]">
+                    </div>
+                    <textarea placeholder="PROJECT DETAILS" rows="4"
+                        class="w-full bg-white/5 p-5 rounded-xl border border-white/10 outline-none focus:border-blue-500 transition font-bold text-[10px]"></textarea>
+                    <button
+                        class="w-full bg-blue-600 py-5 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-blue-500 transition">Send
+                        Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-[10px] font-black tracking-[0.5em] uppercase opacity-20">
+        &copy; 2026 Sadam Qureshi. All Rights Reserved.
+    </footer>
+
+    <script>
+        function filterProjects(category, btn) {
+            const cards = document.querySelectorAll('.project-card');
+            const btns = document.querySelectorAll('.filter-btn');
+            btns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            cards.forEach(card => {
+                card.style.opacity = '0';
+                setTimeout(() => {
+                    if (category === 'all' || card.dataset.category === category) {
+                        card.classList.remove('hidden');
+                        setTimeout(() => card.style.opacity = '1', 50);
+                    } else { card.classList.add('hidden'); }
+                }, 300);
+            });
+        }
+
+        const lines = ["Modern Websites", "Custom Dashboards", "Mobile Apps", "Enterprise Systems"];
+        let i = 0, j = 0, isDeleting = false;
+        function type() {
+            const current = lines[i];
+            const el = document.getElementById("typewriter");
+            el.innerHTML = isDeleting ? current.substring(0, j--) : current.substring(0, j++);
+            let speed = isDeleting ? 50 : 150;
+            if (!isDeleting && j > current.length) { isDeleting = true; speed = 2000; }
+            else if (isDeleting && j === 0) { isDeleting = false; i = (i + 1) % lines.length; speed = 500; }
+            setTimeout(type, speed);
+        }
+        type();
+    </script>
+</body>
+
+</html>
