@@ -87,7 +87,7 @@
                 <a href="#experience" class="hover:text-white transition">Experience</a>
                 <a href="#contact" class="hover:text-white transition">Contact</a>
             </div>
-            <a href="https://wa.me/yournumber"
+            <a href="https://wa.me/923035609341" target="_blank"
                 class="bg-blue-600 px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-blue-500 transition">Let's
                 Talk</a>
         </div>
@@ -98,7 +98,7 @@
         <div class="max-w-7xl mx-auto grid md:grid-cols-12 gap-12 items-center">
             <div class="md:col-span-8 space-y-6">
                 <h1 class="text-6xl md:text-8xl font-extrabold leading-[0.9] tracking-tighter">
-                    Full Stack <span class="text-gradient">Engineer</span><br>& UI Specialist
+                    Full Stack <span class="text-gradient">Developer</span>
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-400 max-w-2xl font-light">
                     Building <span id="typewriter" class="text-white font-bold border-r-2 border-blue-500"></span> for
@@ -109,9 +109,9 @@
                         class="bg-white text-black px-10 py-4 rounded-xl font-black uppercase tracking-widest text-xs hover:bg-blue-500 hover:text-white transition-all">My
                         Work</a>
                     <div class="flex space-x-3">
-                        <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://github.com/SaDaMQureshi" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sadam-qureshi-96715027b/" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/923035609341" target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
             </div>
@@ -132,11 +132,14 @@
                         onclick="filterProjects('laravel', this)">LARAVEL</button>
                     <button class="filter-btn px-6 py-2 rounded-lg text-[10px] font-black tracking-widest transition"
                         onclick="filterProjects('flutter', this)">FLUTTER</button>
+                    <button class="filter-btn px-6 py-2 rounded-lg text-[10px] font-black tracking-widest transition"
+                        onclick="filterProjects('asp.net', this)">ASP.NET</button>
                 </div>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="project-card glass-card overflow-hidden group" data-category="laravel">
+                <!-- Hospital ERP System -->
+                <div class="project-card glass-card overflow-hidden group" data-category="asp.net">
                     <div class="h-56 bg-[#0a0a0a] flex items-center justify-center border-b border-white/5">
                         <i
                             class="fas fa-hospital text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
@@ -145,33 +148,121 @@
                         <h3 class="text-xl font-bold mb-2">Hospital ERP System</h3>
                         <p class="text-gray-400 text-sm mb-6">Centralized patient records and billing for Hashim Medical
                             City.</p>
-                        <span class="text-[10px] font-black text-blue-400 uppercase tracking-widest">Laravel /
-                            MySQL</span>
+                        <span class="text-[10px] font-black text-emerald-400 uppercase tracking-widest">ASP.NET /
+                            SQL</span>
                     </div>
                 </div>
+                <!-- MediTrack App -->
                 <div class="project-card glass-card overflow-hidden group" data-category="flutter">
                     <div class="h-56 bg-[#0a0a0a] flex items-center justify-center border-b border-white/5">
                         <i
-                            class="fas fa-mobile-screen text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
+                            class="fas fa-heartbeat text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
                     </div>
                     <div class="p-8">
                         <h3 class="text-xl font-bold mb-2">MediTrack App</h3>
                         <p class="text-gray-400 text-sm mb-6">Real-time health monitoring and medication alert system.
                         </p>
                         <span class="text-[10px] font-black text-purple-400 uppercase tracking-widest">Flutter /
-                            Firebase</span>
+                            Laravel / MySQL</span>
                     </div>
                 </div>
-                <div class="project-card glass-card overflow-hidden group" data-category="laravel">
+                <!-- HMC Pharmacy App -->
+                <div class="project-card glass-card overflow-hidden group" data-category="flutter">
                     <div class="h-56 bg-[#0a0a0a] flex items-center justify-center border-b border-white/5">
-                        <i
-                            class="fas fa-chart-line text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
+                         <i
+                            class="fas fa-pills text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
                     </div>
                     <div class="p-8">
-                        <h3 class="text-xl font-bold mb-2">Admin Dashboard</h3>
-                        <p class="text-gray-400 text-sm mb-6">High-density data management with custom DataTables.</p>
+                        <h3 class="text-xl font-bold mb-2">HMC Pharmacy App</h3>
+                        <p class="text-gray-400 text-sm mb-6">Online pharmacy app and inventory management system.</p>
+                        <span class="text-[10px] font-black text-blue-400 uppercase tracking-widest">Flutter /
+                            Laravel / MySQL</span>
+                    </div>
+                </div>
+                <!-- Hospital Management System -->
+                <div class="project-card glass-card overflow-hidden group" data-category="laravel">
+                    <div class="h-56 bg-[#0a0a0a] flex items-center justify-center border-b border-white/5">
+                         <i
+                            class="fas fa-hospital text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">Hospital Management System</h3>
+                        <p class="text-gray-400 text-sm mb-6">Comprehensive hospital management solution for administrative tasks.</p>
                         <span class="text-[10px] font-black text-emerald-400 uppercase tracking-widest">Laravel /
-                            PHP</span>
+                            MySQL</span>
+                    </div>
+                </div>
+                <!-- Teachers Tution App -->
+                <div class="project-card glass-card overflow-hidden group" data-category="laravel">
+                    <div class="h-56 bg-[#0a0a0a] flex items-center justify-center border-b border-white/5">
+                         <i
+                            class="fas fa-chalkboard-teacher text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">Teachers Tution App</h3>
+                        <p class="text-gray-400 text-sm mb-6">Teacher tution managment app where teachers and studetnt take courses and chat</p>
+                        <span class="text-[10px] font-black text-purple-400 uppercase tracking-widest">Laravel /
+                            Flutter / MySQL</span>
+                    </div>
+                </div>
+                <!-- Routefy -->
+                <div class="project-card glass-card overflow-hidden group" data-category="laravel">
+                    <div class="h-56 bg-[#0a0a0a] flex items-center justify-center border-b border-white/5">
+                         <i
+                            class="fas fa-route text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">Routefy</h3>
+                        <p class="text-gray-400 text-sm mb-6">Route planning and optimization app for efficient delivery services.</p>
+                        <span class="text-[10px] font-black text-blue-400 uppercase tracking-widest">Laravel / MySQL</span>
+                    </div>
+                </div>
+                 <!-- Cafeteria -->
+                <div class="project-card glass-card overflow-hidden group" data-category="asp.net">
+                    <div class="h-56 bg-[#0a0a0a] flex items-center justify-center border-b border-white/5">
+                         <i
+                            class="fas fa-utensils text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">Cafeteria</h3>
+                        <p class="text-gray-400 text-sm mb-6">Cafeteria management system for efficient food service operations.</p>
+                        <span class="text-[10px] font-black text-emerald-400 uppercase tracking-widest">ASP.Net MVC / SQL</span>
+                    </div>
+                </div>
+                 <!-- EduTrack -->
+                <div class="project-card glass-card overflow-hidden group" data-category="asp.net">
+                    <div class="h-56 bg-[#0a0a0a] flex items-center justify-center border-b border-white/5">
+                         <i
+                            class="fas fa-graduation-cap text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">EduTrack</h3>
+                        <p class="text-gray-400 text-sm mb-6">Educational tracking system for managing student progress and performance.</p>
+                        <span class="text-[10px] font-black text-purple-400 uppercase tracking-widest">ASP.Net MVC / SQL</span>
+                    </div>
+                </div>
+                 <!-- ServiLink  -->
+                <div class="project-card glass-card overflow-hidden group" data-category="laravel">
+                    <div class="h-56 bg-[#0a0a0a] flex items-center justify-center border-b border-white/5">
+                         <i
+                            class="fas fa-link text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">ServiLink</h3>
+                        <p class="text-gray-400 text-sm mb-6">Service linking platform for connecting users with available service providers.</p>
+                        <span class="text-[10px] font-black text-blue-400 uppercase tracking-widest">Laravel / MySQL</span>
+                    </div>
+                </div>
+                 <!-- Expense Tracker  -->
+                <div class="project-card glass-card overflow-hidden group" data-category="flutter">
+                    <div class="h-56 bg-[#0a0a0a] flex items-center justify-center border-b border-white/5">
+                         <i
+                            class="fas fa-wallet text-5xl opacity-20 group-hover:opacity-100 transition duration-500"></i>
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-2">Expense Tracker</h3>
+                        <p class="text-gray-400 text-sm mb-6">A simple expense tracking application for managing personal finances.</p>
+                        <span class="text-[10px] font-black text-emerald-400 uppercase tracking-widest">Flutter</span>
                     </div>
                 </div>
             </div>
@@ -248,9 +339,9 @@
                         </div>
                     </div>
                     <div class="flex space-x-4">
-                        <a href="#" class="social-btn"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-btn"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://github.com/SaDaMQureshi" target="_blank" class="social-btn"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/sadam-qureshi-96715027b/" target="_blank" class="social-btn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/923035609341" target="_blank" class="social-btn"><i class="fab fa-whatsapp"></i></a>
                     </div>
                 </div>
                 <form class="space-y-4">
@@ -291,7 +382,7 @@
             });
         }
 
-        const lines = ["Modern Websites", "Custom Dashboards", "Mobile Apps", "Enterprise Systems"];
+        const lines = ["Modern Websites", "Admin Panels", "Mobile Apps", "Backend API's"];
         let i = 0, j = 0, isDeleting = false;
         function type() {
             const current = lines[i];
